@@ -1,0 +1,205 @@
+{
+  // =============== UI / Aparência ===============
+  "workbench.colorTheme": "OM Theme (Night Owl Italic)",
+  "workbench.iconTheme": "a-file-icon-vscode",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.list.horizontalScrolling": false,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.tree.indent": 16,
+  "workbench.tree.enableStickyScroll": false,
+  "window.title": "${activeFolderMedium}",
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+
+  // =============== Editor / Texto ===============
+  "editor.fontFamily": "'Fira Code', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.lineHeight": 1.8,
+  "editor.smoothScrolling": false,                 // ⭐ menos custo de render
+  "editor.cursorSmoothCaretAnimation": "off",      // ⭐
+  "editor.formatOnSave": true,
+  "editor.snippetSuggestions": "inline",
+  "editor.suggest.preview": true,
+  "editor.suggest.insertMode": "insert",
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.minimap.enabled": false,                 // ⭐
+  "editor.inlayHints.enabled": "off",              // ⭐
+  "editor.codeLens": false,                        // ⭐
+  "editor.semanticHighlighting.enabled": false,    // ⭐
+  "breadcrumbs.enabled": false,                    // ⭐
+  "editor.quickSuggestions": { "strings": "on" },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.markdownlint": "explicit"
+  },
+
+  // Cores (desliga itálico em comentários, por exemplo)
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "comment.block",
+          "comment.block.documentation",
+          "comment.line"
+        ],
+        "settings": { "fontStyle": "" }
+      }
+    ]
+  },
+
+  // =============== Linguagens (overrides) ===============
+  "[python]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 100
+  },
+  "[xml]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+    "editor.wrappingIndent": "same",
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "[plaintext]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 100,
+    "editor.wrappingIndent": "same"
+  },
+  "[typescriptreact]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80
+  },
+  "[javascript]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 100
+  },
+  "[sql]": {
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80
+  },
+  "[prisma]":{
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+    "editor.formatOnSave": true
+  },
+
+  // =============== Arquivos / Explorer ===============
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 60000,
+  "files.autoSaveWhenNoErrors": true,
+  "files.associations": {
+    ".env.*": "dotenv",
+    ".dev.vars": "dotenv",
+    ".prettierrc": "json",
+    "*.css": "css"
+  },
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+
+  // File Nesting (agrupa arquivos relacionados)
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "tsconfig.json": "tsconfig.*.json, postcss.config.mjs",
+    "next.config.*": "next-env.d.ts"
+  },
+
+  // 🧹 Ignorar pesado (busca / watchers / lista) — ⭐
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.git/**": true,
+    "**/.next/**": true,
+    "**/coverage/**": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/coverage": true
+  },
+
+  // =============== Terminal / Run ===============
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.gpuAcceleration": "off",     // ⭐
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.showExecutionMessage": false,
+
+  // =============== JavaScript / TypeScript ===============
+  "javascript.suggest.autoImports": false,          // ⭐ menos trabalho do IntelliSense
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.tsserver.log": "off",
+  "typescript.tsdk": "node_modules/typescript/lib", // ⭐ usa TS do projeto
+  "typescript.tsserver.maxTsServerMemory": 4096,    // ⭐
+  "typescript.tsserver.useSeparateSyntaxServer": true, // ⭐
+  "typescript.disableAutomaticTypeAcquisition": true,  // ⭐
+  "typescript.suggest.autoImports": false,          // ⭐
+
+  // =============== Extensões específicas ===============
+  "vsicons.dontShowNewVersionMessage": true,
+  "vsicons.presets.foldersAllDefaultIcon": true,
+  "a-file-icon-vscode.arrowTheme": "triangle",
+  "open-in-browser.default": "vivaldi",
+  "bootstrapIntelliSense": {
+    "enable": false,
+    "bsVersion": "5.3.3",
+    "useLocalFile": false,
+    "cssFilePath": "",
+    "languageSupport": []
+  },
+  "jupyter.askForKernelRestart": false,
+  "python.createEnvironment.trigger": "off",
+
+  // Copilot totalmente desativado (global e por linguagem)
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typescriptreact": false
+  },
+
+  // =============== Git / GitHub ===============
+  "githubPullRequests.createOnPublishBranch": "never",
+  // Desative o Git interno se o repo for MUITO grande (opção por projeto) — ⭐
+  // "git.enabled": false,
+  // "git.autorefresh": false,
+  // "git.decorations.enabled": false,
+
+  // =============== Postgres (pgAdmin VSCode) ===============
+  "pgsql.serverGroups": [
+    {
+      "name": "Servers",
+      "id": "C89BE6DF-2AB8-48F9-A384-E713282891B8",
+      "isDefault": true
+    }
+  ],
+
+  // =============== Diversos ===============
+  "extensions.ignoreRecommendations": true,
+  "google-translate.firstLanguage": "pt",
+  "http.proxyStrictSSL": false,
+  "http.systemCertificates": true,
+  "telemetry.telemetryLevel": "off",               // ⭐
+  "npm.fetchOnlinePackageInfo": false              // ⭐
+}
