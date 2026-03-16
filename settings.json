@@ -1,25 +1,30 @@
 {
   // =============== UI / Aparência ===============
-  "workbench.colorTheme": "OM Theme (Night Owl Italic)",
+  "workbench.colorTheme": "2077",
   "workbench.iconTheme": "a-file-icon-vscode",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.list.horizontalScrolling": false,
   "workbench.editor.pinnedTabsOnSeparateRow": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.tree.indent": 16,
+  "workbench.tree.indent": 14,
   "workbench.tree.enableStickyScroll": false,
-  "window.title": "${activeFolderMedium}",
-  "window.menuBarVisibility": "compact",
-  "window.commandCenter": false,
-
+  //novas
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderLineHighlight": "none",
+  "editor.glyphMargin": false,
+  "workbench.layoutControl.type": "menu",
+  "workbench.layoutControl.enabled": false,
+  "window.title": " ",
+  // "editor.lineNumbers": "off",
+  "editor.showFoldingControls": "never",
   // =============== Editor / Texto ===============
   "editor.fontFamily": "'Fira Code', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.lineHeight": 1.8,
-  "editor.smoothScrolling": false,                 // ⭐ menos custo de render
-  "editor.cursorSmoothCaretAnimation": "off",      // ⭐
+  "editor.smoothScrolling": false, // ⭐ menos custo de render
   "editor.formatOnSave": true,
   "editor.snippetSuggestions": "inline",
   "editor.suggest.preview": true,
@@ -27,15 +32,15 @@
   "editor.suggestSelection": "first",
   "editor.inlineSuggest.enabled": true,
   "editor.stickyScroll.enabled": false,
-  "editor.minimap.enabled": false,                 // ⭐
-  "editor.inlayHints.enabled": "off",              // ⭐
-  "editor.codeLens": false,                        // ⭐
-  "editor.semanticHighlighting.enabled": false,    // ⭐
-  "breadcrumbs.enabled": false,                    // ⭐
+  "editor.minimap.enabled": false, // ⭐
+  "editor.inlayHints.enabled": "off", // ⭐
+  "editor.codeLens": false, // ⭐
+  "editor.semanticHighlighting.enabled": false, // ⭐
+  "breadcrumbs.enabled": false, // ⭐
   "editor.quickSuggestions": { "strings": "on" },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.markdownlint": "explicit"
+    "source.fixAll.markdownlint": "explicit",
   },
 
   // Cores (desliga itálico em comentários, por exemplo)
@@ -46,56 +51,56 @@
           "comment",
           "comment.block",
           "comment.block.documentation",
-          "comment.line"
+          "comment.line",
         ],
-        "settings": { "fontStyle": "" }
-      }
-    ]
+        "settings": { "fontStyle": "" },
+      },
+    ],
   },
 
   // =============== Linguagens (overrides) ===============
   "[python]": {
     "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 100
+    "editor.wordWrapColumn": 100,
   },
   "[xml]": {
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 80,
     "editor.wrappingIndent": "same",
-    "editor.defaultFormatter": "DotJoshJohnson.xml"
+    "editor.defaultFormatter": "DotJoshJohnson.xml",
   },
   "[plaintext]": {
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 100,
-    "editor.wrappingIndent": "same"
+    "editor.wrappingIndent": "same",
   },
   "[typescriptreact]": {
     "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 80
+    "editor.wordWrapColumn": 80,
   },
   "[javascript]": {
     "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 100
+    "editor.wordWrapColumn": 100,
   },
   "[sql]": {
     "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 80
+    "editor.wordWrapColumn": 80,
   },
-  "[prisma]":{
+  "[prisma]": {
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 80,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
 
   // =============== Arquivos / Explorer ===============
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 60000,
+  "files.autoSaveDelay": 1000,
   "files.autoSaveWhenNoErrors": true,
   "files.associations": {
     ".env.*": "dotenv",
     ".dev.vars": "dotenv",
     ".prettierrc": "json",
-    "*.css": "css"
+    "*.css": "css",
   },
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
@@ -107,7 +112,7 @@
   "explorer.fileNesting.patterns": {
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
     "tsconfig.json": "tsconfig.*.json, postcss.config.mjs",
-    "next.config.*": "next-env.d.ts"
+    "next.config.*": "next-env.d.ts",
   },
 
   // 🧹 Ignorar pesado (busca / watchers / lista) — ⭐
@@ -116,7 +121,7 @@
     "**/dist": true,
     "**/build": true,
     "**/.next": true,
-    "**/coverage": true
+    "**/coverage": true,
   },
   "files.watcherExclude": {
     "**/node_modules/**": true,
@@ -124,7 +129,7 @@
     "**/build/**": true,
     "**/.git/**": true,
     "**/.next/**": true,
-    "**/coverage/**": true
+    "**/coverage/**": true,
   },
   "files.exclude": {
     "**/.git": true,
@@ -132,7 +137,7 @@
     "**/dist": true,
     "**/build": true,
     "**/.next": true,
-    "**/coverage": true
+    "**/coverage": true,
   },
 
   // =============== Terminal / Run ===============
@@ -140,34 +145,11 @@
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.suggest.enabled": true,
-  "terminal.integrated.gpuAcceleration": "off",     // ⭐
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.showExecutionMessage": false,
-
-  // =============== JavaScript / TypeScript ===============
-  "javascript.suggest.autoImports": false,          // ⭐ menos trabalho do IntelliSense
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.tsserver.log": "off",
-  "typescript.tsdk": "node_modules/typescript/lib", // ⭐ usa TS do projeto
-  "typescript.tsserver.maxTsServerMemory": 4096,    // ⭐
-  "typescript.tsserver.useSeparateSyntaxServer": true, // ⭐
-  "typescript.disableAutomaticTypeAcquisition": true,  // ⭐
-  "typescript.suggest.autoImports": false,          // ⭐
+  "terminal.integrated.gpuAcceleration": "off", // ⭐
 
   // =============== Extensões específicas ===============
-  "vsicons.dontShowNewVersionMessage": true,
-  "vsicons.presets.foldersAllDefaultIcon": true,
-  "a-file-icon-vscode.arrowTheme": "triangle",
   "open-in-browser.default": "vivaldi",
-  "bootstrapIntelliSense": {
-    "enable": false,
-    "bsVersion": "5.3.3",
-    "useLocalFile": false,
-    "cssFilePath": "",
-    "languageSupport": []
-  },
   "jupyter.askForKernelRestart": false,
-  "python.createEnvironment.trigger": "off",
 
   // Copilot totalmente desativado (global e por linguagem)
   "github.copilot.nextEditSuggestions.enabled": false,
@@ -176,7 +158,7 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "typescriptreact": false
+    "typescriptreact": false,
   },
 
   // =============== Git / GitHub ===============
@@ -186,20 +168,22 @@
   // "git.autorefresh": false,
   // "git.decorations.enabled": false,
 
-  // =============== Postgres (pgAdmin VSCode) ===============
-  "pgsql.serverGroups": [
-    {
-      "name": "Servers",
-      "id": "C89BE6DF-2AB8-48F9-A384-E713282891B8",
-      "isDefault": true
-    }
-  ],
-
   // =============== Diversos ===============
   "extensions.ignoreRecommendations": true,
   "google-translate.firstLanguage": "pt",
   "http.proxyStrictSSL": false,
   "http.systemCertificates": true,
-  "telemetry.telemetryLevel": "off",               // ⭐
-  "npm.fetchOnlinePackageInfo": false              // ⭐
+  "telemetry.telemetryLevel": "off", // ⭐
+  "npm.fetchOnlinePackageInfo": false,
+  "window.commandCenter": false,
+  "claudeCode.preferredLocation": "panel",
+  "workbench.sideBar.location": "left",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "workbench.editor.enablePreview": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "css.lint.unknownAtRules": "ignore",
+  "workbench.activityBar.location": "default", // ⭐
+  "window.menuBarVisibility": "compact",
+  "workbench.activityBar.compact": true
 }
