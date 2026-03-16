@@ -18,7 +18,7 @@
   "workbench.layoutControl.enabled": false,
   "window.title": " ",
   // "editor.lineNumbers": "off",
-  "editor.showFoldingControls": "never",
+  "editor.showFoldingControls": "mouseover",
   // =============== Editor / Texto ===============
   "editor.fontFamily": "'Fira Code', monospace",
   "editor.fontLigatures": true,
